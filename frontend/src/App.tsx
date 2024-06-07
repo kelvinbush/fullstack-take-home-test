@@ -13,6 +13,7 @@ import { useState } from "react";
 import { useBooksStore } from "./hooks/useBooksStore.ts";
 import { Book } from "./types.ts";
 import ReadingList from "./components/reading-list.tsx";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -100,6 +101,7 @@ function App() {
         </ClickAwayListener>
       </Box>
       <ReadingList />
+      <Toaster />
     </Container>
   );
 }
